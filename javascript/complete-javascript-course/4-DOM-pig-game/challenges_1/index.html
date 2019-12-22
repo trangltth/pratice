@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Pig Game</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+</head>
+
+<body style="background-image:url('/4-DOM-pig-game/challenges_1/images/galaxy.jpg')">
+  <div class="container m-5" style="background-color:#ffffcc;">
+    <div class="row justify-content-center py-5" style="text-align:center">
+      <h2 class="alert_winner" style="display:None">
+        WHO IS WINNER !!!
+      </h2>
+    </div>
+    <div class="row justify-content-center py-3" style="text-align:center">
+      <div class="col-2 player_pannel_0">
+
+        <h3 class="player0">
+          Trang
+          <span>
+            <img class="active-player-0" src="/4-DOM-pig-game/challenges_1/images/icon_circle.png" style="width:10%">
+          </span>
+        </h3>
+
+        <h4 class="score-0"> 0 </h4>
+      </div>
+      <div class="col-4">
+        <img class="img-fluid round " id="dice" style="max-width:50%;" src="/4-DOM-pig-game/challenges_1/images/dice-1.png" alt="">
+      </div>
+      <div class="col-2 player_pannel_1">
+        <h3 class="player1">
+          Auggie
+          <span>
+            <img class="active-player-1" src="/4-DOM-pig-game/challenges_1/images/icon_circle.png" style="width:10%">
+          </span>
+        </h3>
+        <h4 class="score-1"> 0 </h4>
+      </div>
+    </div>
+    <div class="row justify-content-center pb-5">
+      <div class="col-2 " style="text-align:center">
+        <h6>Current</h6>
+        <h6 class="current-0"> 0 </h6>
+      </div>
+      <div class="col-4 pt-2" style="text-align:center">
+        <button class="btn btn-outline-primary mb-3 btn-roll">ROLLDICE</button>
+        <br>
+        <button class="btn btn-outline-primary btn-hold">HOLD</button>
+        <button class="btn btn-outline-primary btn-new" style="display: None">NEW GAME</button>
+      </div>
+      <div class="col-2 " style="text-align:center">
+        <h6>Current</h6>
+        <h6 class="current-1"> 0 </h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="/4-DOM-pig-game/challenges_1/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

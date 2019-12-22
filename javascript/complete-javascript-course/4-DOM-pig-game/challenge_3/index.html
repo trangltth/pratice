@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>PIG GAME</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <link rel="icon" type="image/gif" href="/4-DOM-pig-game/challenges_2/images/dice_icon.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="/4-DOM-pig-game/challenge_3/css/styles.css">
+</head>
+
+<body>
+  <div class="container text-center justify-content-center main">
+    <div class="row">
+      <div class="col-12 pt-2">
+        <h3 class="alert-winner">
+          PIG GAME 2020
+        </h3>
+      </div>
+    </div>
+    <div class="row score-user">
+      <div class="col-2 offset-2">
+        <div class="player-0 active">
+          Trang
+        </div>
+        <div class="score-0">
+          100
+        </div>
+        <curr>Current</curr>
+        <h6 class="current-0"> 0 </h6>
+      </div>
+      <div class="col-4" id="dice" >
+          <div class="container text-center input-limitation">
+              <h5 class="betting-title" style="font-weight:bold">BETTING SCORE</h5>
+              <input class="form-control limitation" value="100" type="text" pattern="[0-9]+" >
+              <br>
+              <button class="btn btn-success" id = "btn-start">BET</button>
+          </div>
+        <img id="dice-0" src="/4-DOM-pig-game/challenge_3/images/dice-1.png" alt="dice">
+        <img id="dice-1" src="/4-DOM-pig-game/challenge_3/images/dice-1.png" alt="dice">
+        
+      </div>
+      <div class="col-2">
+        <div class="player-1">
+          <p>Vy Sâu</p> 
+        </div>
+        <div class="score-1">
+          30
+        </div>
+        <curr>Current</curr>
+        <h6 class="current-1"> 0 </h6>
+      </div>
+    </div>
+    <div class="row dice-result">
+      <div class="col-4 offset-4">
+        <button class="btn btn-outline-primary btn-roll mr-2">ROLLDICE</button>
+        <button class="btn btn-outline-primary btn-hold">HOLD</button>
+        <button class="btn btn-outline-primary btn-new">NEW GAME</button>
+      </div>
+    </div>
+    
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="/4-DOM-pig-game/challenge_3/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
