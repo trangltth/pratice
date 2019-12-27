@@ -57,6 +57,18 @@ var budgetController = (function(){
         percentage: data.percentage
       }
     },
+    deleteTrasaction: function(type, id){
+      pos = -1
+      data.allItems[type].forEach(function(item, index_){
+        if (item.id === id){
+          pos =  index_
+        }
+      });
+
+      data.allItems[type].splice(pos,1)
+      if (pos > -1) { return true }
+      return false
+    },
     publicTest: function () {
       console.log(data)
     }
@@ -76,7 +88,8 @@ var UIController = (function () {
     budget_total: '.budget__value',
     budget_income_value: '.budget__income--value',
     budget_expense_value: '.budget__expenses--value',
-    budget_expense_percentage: '.budget__expenses--percentage'
+    budget_expense_percentage: '.budget__expenses--percentage',
+    container: '.container'
   };
 
   var html_tag = {
@@ -145,6 +158,9 @@ var UIController = (function () {
       document.querySelector(DOMElement.budget_expense_value).textContent = budget.totalExp;
       document.querySelector(DOMElement.budget_expense_percentage).textContent = 
             budget.percentage < 0 ? '---' : budget.percentage + '%';
+    },
+    deleteTransaction: function(tag_id){
+      document.getElementById(tag_id).remove()
     }
   }
 })();
@@ -152,7 +168,9 @@ var UIController = (function () {
 // --------------- Controller Oject ------------------------------
 var controller = (function (budgetControll, UIControll) {
 
+  var DOMElement = UIControll.getDOMElement()
   var eventListener = function () {
+    // catch event for input transaction
     document.querySelector(UIControll.getDOMElement().btn_click).addEventListener('click', processTransaction);
     
     input_transaction_tag = UIControll.getDOMElement().input_value + ', ' + UIControll.getDOMElement().input_description
@@ -166,6 +184,27 @@ var controller = (function (budgetControll, UIControll) {
         UIControll.initValidity()
       })
     });
+
+    // Catch event for delete transaction
+    document.querySelector(DOMElement.container).addEventListener('click', function (event) {
+      if (event.target.className === 'ion-ios-close-outline'){
+        var tag_id, id_parts, type, id; 
+        tag_id =  ""
+        event.path.forEach(function(subPath){
+                                    if (subPath.className === 'item clearfix'){
+                                      tag_id =  subPath.id;
+                                    };
+                                  })
+        
+        
+        if (tag_id !== ""){
+          id_parts = tag_id.split('-')
+          type = (id_parts[0] === 'income') ? 'inc' : 'exp'
+          id = parseInt(id_parts[1])
+          deleteTransaction(tag_id)
+        }
+      }    
+    })
     
   };
 
@@ -173,6 +212,16 @@ var controller = (function (budgetControll, UIControll) {
     budgetControll.calculateBudget()
     budget = budgetControll.getBudget()
     UIControll.displayBudget(budget)
+  }
+
+  deleteTransaction = function(tag_id){
+    id_parts = tag_id.split('-')
+    type = (id_parts[0] === 'income') ? 'inc' : 'exp'
+    id = parseInt(id_parts[1])
+
+    budgetControll.deleteTrasaction(type,id)
+    UIControll.deleteTransaction(tag_id)
+    displayBudget();
   }
 
   processTransaction = function(){
