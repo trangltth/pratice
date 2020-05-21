@@ -10,7 +10,7 @@ in a separate variable)
 so that they can change the predefined score of 100. (Hint: you can read that value with 
   the .value property in JavaScript. This is a good oportunity to use google to figure this out :)
 
-  3. Add another dice to the game, so that there are two dices now. 
+3. Add another dice to the game, so that there are two dices now. 
 The player looses his current score when one of them is a 1. 
 (Hint: you will need CSS to position the second dice, so take a look at the CSS code for the first one.)
 */
@@ -49,7 +49,7 @@ document.querySelector('#btn-start').addEventListener('click', function () {
 document.querySelector('.btn-roll').addEventListener('click', function () {
   dice = Math.floor(Math.random() * 6) + 1;
   document.querySelector('#dice > img').style.display = 'inline';
-  document.querySelector('#dice > img').src = "/4-DOM-pig-game/challenges_1/images/dice-" + dice + ".png";
+  document.querySelector('#dice > img').src = "/javascript/complete-javascript-course/4-DOM-pig-game/challenges_2/images/dice-" + dice + ".png";
 
   // check if 6 exist or not
   if(dice === 6 & score_list[activePlayer].indexOf(dice) > -1){

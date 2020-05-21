@@ -1,0 +1,100 @@
+body{
+  background-image: url('/javascript/complete-javascript-course/4-DOM-pig-game/challenges_3/images/fundo-de-games-9.png');
+  font-family: Lato;
+  display: inline !important;
+}
+
+.main{
+  background-color: #ffffcc;
+  width: 80%;
+  border-radius: 50px;
+  margin-top: 1.2%;
+}
+
+.alert-winner, .score-user{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+#dice > img{
+  width: 50%;
+}
+
+#dice-0{
+  position: relative;
+  top: 5%;
+  left: 20%;
+  border: grey solid 0.7px;
+}
+
+#dice-1{
+  position: relative;
+  right: 20%;
+  bottom: 5%;
+  border: grey solid 0.7px;
+}
+
+curr{
+  font-size: 20px;
+  margin-top: 200px;
+}
+
+
+.player-0, .player-1, .alert-winner{
+  font-weight: bold;
+  font-size: 35px;
+  white-space: nowrap;
+}
+
+
+.player-0, .player-1{
+  padding-top: 50%;
+}
+
+.score-1, .score-0{
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 80%
+}
+
+.btn-new{
+  display: none;
+}
+
+.limitation{
+  text-align: center;
+  width: 13vw;
+  height: 3vw;
+  border-radius: 5px;
+  top: 0.1vw;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.dice-result{
+  padding-top: 15px;
+  padding-bottom: 20px;
+  white-space: nowrap;
+}
+
+
+input:invalid{
+  border: red solid 3px;
+}
+
+input:valid{
+  border: grey solid 1px;
+  outline: none;
+}
+
+.active {
+  background-image: url('/4-DOM-pig-game/challenges_2/images/icon_circle.png');
+  background-repeat: no-repeat; 
+  background-position: center 50%;
+  background-size: 15px;  
+}
+
+.betting-title{
+  white-space: nowrap;
+}
+

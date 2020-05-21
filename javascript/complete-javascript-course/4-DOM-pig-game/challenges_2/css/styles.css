@@ -1,5 +1,5 @@
 body{
-  background-image: url('/4-DOM-pig-game/challenges_2/images/fundo-de-games-9.png');
+  background-image: url('/javascript/complete-javascript-course/4-DOM-pig-game/challenges_2/images/fundo-de-games-9.png');
   font-family: Lato;
   display: inline !important;
 }
@@ -67,7 +67,7 @@ input:valid{
 }
 
 .active {
-  background-image: url('/4-DOM-pig-game/challenges_2/images/icon_circle.png');
+  background-image: url('/javascript/complete-javascript-course/4-DOM-pig-game/challenges_2/images/icon_circle.png');
   background-repeat: no-repeat; 
   background-position: right top;
   background-size: 15px;

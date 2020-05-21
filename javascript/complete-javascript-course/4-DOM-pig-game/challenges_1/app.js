@@ -27,7 +27,7 @@ init()
 document.querySelector('.btn-roll').addEventListener('click', function(){
   dice = Math.floor(Math.random() * 6) + 1;
   document.getElementById('dice').style.display = 'inline';
-  document.getElementById('dice').src = "/4-DOM-pig-game/challenges_1/images/dice-" + dice + ".png";
+  document.getElementById('dice').src = "/javascript/complete-javascript-course/4-DOM-pig-game/challenges_1/images/dice-" + dice + ".png";
   
   // check if 6 exist or not
   if (dice === 6 & scores_list[activePlayer].indexOf(dice) > -1){
